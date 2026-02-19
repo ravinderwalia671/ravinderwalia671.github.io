@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ravinder Singh | Portfolio</title>
+    <title>Ravinder Singh | Academic Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Ravinder Singh - M.Tech CSE, Head of Department and Training & Placement Officer">
+    <meta name="description" content="Ravinder Singh - M.Tech CSE | Head of Department | Training & Placement Officer | Academic Leader with 25+ Years Experience">
+    <meta name="author" content="Ravinder Singh">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,8 +20,41 @@
         }
 
         body {
-            background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            background: linear-gradient(to right, #1e3c72, #2a5298);
             color: white;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            z-index: 1000;
+        }
+
+        nav h3 {
+            color: gold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: gold;
         }
 
         header {
@@ -30,17 +64,16 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding-top: 80px;
         }
 
         header h1 {
             font-size: 3.5rem;
-            animation: fadeIn 2s ease-in-out;
         }
 
         header p {
-            font-size: 1.3rem;
             margin-top: 15px;
-            opacity: 0.9;
+            font-size: 1.2rem;
         }
 
         .btn {
@@ -53,6 +86,7 @@
             border-radius: 30px;
             cursor: pointer;
             transition: 0.3s;
+            text-decoration: none;
         }
 
         .btn:hover {
@@ -61,13 +95,12 @@
         }
 
         section {
-            padding: 80px 10%;
+            padding: 100px 10%;
         }
 
         h2 {
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
+            margin-bottom: 50px;
             color: gold;
         }
 
@@ -75,48 +108,22 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 25px;
+            gap: 30px;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
             border-radius: 15px;
-            width: 300px;
-            backdrop-filter: blur(10px);
+            width: 320px;
+            backdrop-filter: blur(12px);
             transition: 0.4s;
             text-align: center;
         }
 
         .card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-
-        .skills .skill {
-            margin-bottom: 20px;
-        }
-
-        .progress {
-            background: rgba(255,255,255,0.2);
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            height: 10px;
-            background: gold;
-            width: 0;
-            transition: width 2s ease-in-out;
-        }
-
-        .timeline {
-            border-left: 3px solid gold;
-            padding-left: 20px;
-        }
-
-        .timeline-item {
-            margin-bottom: 30px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
         }
 
         .counter {
@@ -125,33 +132,43 @@
             color: gold;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-            margin: auto;
+        .project-card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: gold;
+            font-weight: 600;
+            text-decoration: none;
         }
 
-        input, textarea {
-            margin-bottom: 15px;
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* DTE Logo */
+        .logo-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .logo-section img {
+            width: 120px;
+            margin-top: 15px;
+            background: white;
             padding: 10px;
-            border-radius: 8px;
-            border: none;
+            border-radius: 10px;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background: rgba(0,0,0,0.4);
-            margin-top: 40px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            background: rgba(0,0,0,0.6);
         }
 
         @media(max-width: 768px) {
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
             .card-container {
                 flex-direction: column;
                 align-items: center;
@@ -162,119 +179,81 @@
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+    <h3>Ravinder Singh</h3>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
 <header>
     <h1>Ravinder Singh</h1>
     <p>M.Tech in Computer Science & Engineering</p>
     <p>Head of Department & Training and Placement Officer</p>
-    <a href="#about"><button class="btn">Explore Profile</button></a>
+    <a href="#projects" class="btn">View Latest Work</a>
 </header>
 
+<!-- ABOUT -->
 <section id="about">
     <h2>About Me</h2>
     <div class="card-container">
         <div class="card">
             <p>
-                A highly experienced academic leader with over 25 years of excellence in 
-                Computer Science & Engineering education. Currently serving as 
-                Head of Department and Training & Placement Officer at 
-                Government Polytechnic College, Mohali.
+                Academic leader with over 25+ years of excellence in Computer Science & Engineering.
+                Serving as Head of Department and Training & Placement Officer
+                at Government Polytechnic College, Mohali.
             </p>
         </div>
         <div class="card">
-            <div class="counter" data-target="25">0</div>
-            <p>+ Years of Academic Experience</p>
+            <div class="counter">25+</div>
+            <p>Years of Academic Experience</p>
         </div>
         <div class="card">
-            <div class="counter" data-target="1000">0</div>
+            <div class="counter">1000+</div>
             <p>Students Mentored</p>
         </div>
     </div>
+
+    <!-- DTE LOGO -->
+    <div class="logo-section">
+        <h3>Affiliated With</h3>
+        <!-- Replace src with official DTE logo image path -->
+        <img src="assets/img/dte-logo.png" alt="DTE Logo">
+    </div>
 </section>
 
-<section>
-    <h2>Professional Roles</h2>
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Latest Project</h2>
     <div class="card-container">
-        <div class="card">
-            <h3>Head of Department</h3>
-            <p>Leading academic excellence, curriculum development, faculty coordination and student mentorship.</p>
-        </div>
-        <div class="card">
-            <h3>Training & Placement Officer</h3>
-            <p>Managing industry collaborations, campus placements, skill enhancement programs and career guidance.</p>
-        </div>
-    </div>
-</section>
-
-<section class="skills">
-    <h2>Skills & Expertise</h2>
-    <div class="skill">
-        <p>Leadership & Administration</p>
-        <div class="progress"><div class="progress-bar" data-width="95%"></div></div>
-    </div>
-    <div class="skill">
-        <p>Academic Management</p>
-        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
-    </div>
-    <div class="skill">
-        <p>Industry Coordination</p>
-        <div class="progress"><div class="progress-bar" data-width="88%"></div></div>
-    </div>
-</section>
-
-<section>
-    <h2>Experience Timeline</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <h3>Head of Department</h3>
-            <p>Overseeing departmental operations, academic planning, and faculty leadership.</p>
-        </div>
-        <div class="timeline-item">
-            <h3>Training & Placement Officer</h3>
-            <p>Successfully coordinating placement drives and building strong industry partnerships.</p>
+        <div class="card project-card">
+            <h3>Machine Learning - Iris Classifier</h3>
+            <p>
+                A machine learning model that predicts Iris flower species 
+                using classification algorithms. Built using Python and deployed online.
+            </p>
+            <a href="https://ravinderwalia671-irisml.hf.space" target="_blank">
+                View Live Project →
+            </a>
         </div>
     </div>
 </section>
 
-<section>
+<!-- CONTACT -->
+<section id="contact">
     <h2>Contact</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button class="btn" type="submit">Send Message</button>
-    </form>
+    <div style="text-align:center;">
+        <p>Email: your-email@example.com</p>
+        <p>GitHub: ravinderwalia671</p>
+    </div>
 </section>
 
 <footer>
-    © 2026 Ravinder Singh | All Rights Reserved
+    © 2026 Ravinder Singh | Academic Portfolio
 </footer>
-
-<script>
-    // Counter Animation
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-        const updateCounter = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-            const increment = target / 100;
-
-            if(count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCounter, 30);
-            } else {
-                counter.innerText = target;
-            }
-        };
-        updateCounter();
-    });
-
-    // Progress Bar Animation
-    window.addEventListener('load', () => {
-        document.querySelectorAll('.progress-bar').forEach(bar => {
-            bar.style.width = bar.getAttribute('data-width');
-        });
-    });
-</script>
 
 </body>
 </html>
