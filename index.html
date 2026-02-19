@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ravinder Singh | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ravinder Singh - M.Tech CSE, Head of Department and Training & Placement Officer">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f2027;
+            background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+            color: white;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 12px 25px;
+            border: none;
+            background: gold;
+            color: black;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: gold;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            width: 300px;
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .skills .skill {
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: gold;
+            width: 0;
+            transition: width 2s ease-in-out;
+        }
+
+        .timeline {
+            border-left: 3px solid gold;
+            padding-left: 20px;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+        }
+
+        .counter {
+            font-size: 2rem;
+            font-weight: bold;
+            color: gold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0,0,0,0.4);
+            margin-top: 40px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media(max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ravinder Singh</h1>
+    <p>M.Tech in Computer Science & Engineering</p>
+    <p>Head of Department & Training and Placement Officer</p>
+    <a href="#about"><button class="btn">Explore Profile</button></a>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card-container">
+        <div class="card">
+            <p>
+                An accomplished academic professional with M.Tech in Computer Science & Engineering.
+                Currently serving as Head of Department and Training & Placement Officer at 
+                Government Polytechnic College, Mohali.
+            </p>
+        </div>
+        <div class="card">
+            <div class="counter" data-target="15">0</div>
+            <p>Years of Academic Experience</p>
+        </div>
+        <div class="card">
+            <div class="counter" data-target="500">0</div>
+            <p>Students Mentored</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Professional Roles</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Head of Department</h3>
+            <p>Leading academic excellence, curriculum development, faculty coordination and student mentorship.</p>
+        </div>
+        <div class="card">
+            <h3>Training & Placement Officer</h3>
+            <p>Managing industry collaborations, campus placements, skill enhancement programs and career guidance.</p>
+        </div>
+    </div>
+</section>
+
+<section class="skills">
+    <h2>Skills & Expertise</h2>
+    <div class="skill">
+        <p>Leadership & Administration</p>
+        <div class="progress"><div class="progress-bar" data-width="95%"></div></div>
+    </div>
+    <div class="skill">
+        <p>Academic Management</p>
+        <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+    </div>
+    <div class="skill">
+        <p>Industry Coordination</p>
+        <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+    </div>
+</section>
+
+<section>
+    <h2>Experience Timeline</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Head of Department</h3>
+            <p>Academic leadership and departmental management.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Training & Placement Officer</h3>
+            <p>Placement drives, corporate relations, and career development initiatives.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button class="btn" type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Ravinder Singh | All Rights Reserved
+</footer>
+
+<script>
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / 100;
+
+            if(count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCounter, 30);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCounter();
+    });
+
+    // Progress Bar Animation
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.progress-bar').forEach(bar => {
+            bar.style.width = bar.getAttribute('data-width');
+        });
+    });
+</script>
+
+</body>
+</html>
